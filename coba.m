@@ -14,9 +14,9 @@ subplot(1,2,2),imhist(Red);
 
 figure(2);
 subplot(1,2,1);imshow(Green);title('Contoh Green');
-subplot(1,2,2),imhist(Red);
+subplot(1,2,2),imhist(Green);
 
 figure(3);
 subplot(1,2,1);imshow(Blue);title('Contoh Blue');
-subplot(1,2,2),imhist(Red);
+subplot(1,2,2),imhist(Blue);
 
