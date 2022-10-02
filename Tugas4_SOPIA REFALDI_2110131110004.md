@@ -11,4 +11,5 @@
 <p align="justify">Jadi Kesimpulanya pola yang ada patterning tidah boleh sama atau pola yang sudah ada tidak boleh digunakan lagi. Bisa dilihat seperti gambar dibawah</p>
 <p align="center"><img src="foto3/2.jpg"></p>
 
+
 - <p align="justify">Difthering</p>
