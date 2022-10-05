@@ -57,3 +57,48 @@
 - Contoh Difhtering
 
 <p align="center"><img src="foto3/10.jpg">
+
+<hr>
+
+- ## Menentukan Pola Yang Ada Pada Patterning dan Dithering
+
+- <p align="justify">Patterning</p>
+<p align="justify">Bagaimana menentukan pola pada patterning? Pertama-tama kita bisa mengetahui secara langsung dengan menghitung banyaknya font biner atau pattern penggantinya kemudian ditambahkan 1.</p>
+<p align="justify">Contoh : Menggunakan 2x2 Font biner, Jadi banyak pola yang didapat adalah 9. </p>
+<p align="justify">Jadi Kesimpulanya pola yang ada patterning tidah boleh sama atau pola yang sudah ada tidak boleh digunakan lagi. Bisa dilihat seperti gambar dibawah</p>
+<p align="center"><img src="foto3/2.jpg"></p>
+
+- <p align="justify">Difthering</p>
+
+- <p align="justify">Matriks Tresshold</p>
+<p align="justify">Threshold dilakukan dengan mempertegas citra dengan cara mengubah citra
+hasil yang memiliki derajat keabuan 255 (8 bit), menjadi hanya dua buah yaitu
+hitam dan putih. Hal yang perlu diperhatikan pada proses threshold adalah
+memilih sebuah nilai threshold (T) dimana piksel yang bernilai dibawah nilai threshold akan diset menjadi hitam dan piksel yang bernilai diatas nilai threshold
+akan diset menjadi putih. Umumnya nilai T dihitung dengan menggunakan
+persamaan: </p>
+
+<p align="center"><img src="foto3/11.jpg"></p>
+
+<p align="justify">Dimana fmaks adalah nilai intensitas maksimum pada citra dan fmin adalah nilai intensitas minimum pada citra.[6] </p>
+
+<p align="justify">Jika f(x,y) adalah nilai intensitas pixel pada posisi (x,y) maka pixel tersebut
+diganti putih atau hitam tergantung kondisi berikut.[1]
+f(x,y) = 255, jika f(x,y) ≥ T
+f(x,y) = 0, jika f(x,y) < T
+Sebagai contoh misalnya diketahui citra grayscale 4x4 pixel dengan kedalaman 8
+bit seperti gambar dibawah </p>
+
+<p align="center"><img src="foto3/12.jpg"></p>
+<p align="center">Greyscale 4x4 Pixel</p>
+
+<p align="justify">Dengan motede ini, nilai threshold T adalah:</p>
+<p align="center"><img src="foto3/13.jpg"></p>
+<p align="justify">Bila nilai T = 145 diterapkan untuk citra pada Gambar dibawah di atas maka diperoleh
+citra seperti pada Gambar dibawah</p>
+<p align="center"><img src="foto3/14.jpg"></p>
+<p align="center">Hasil Greyscale</p>
+
+
+- <p align="justify">Mengapa Pola 4x4 hasilnya kurang bagus dari 16x16?</p>
+<p align="justify">Kenapa 4x4 tidak sebagus 16x16, Karna Citra yang dihasilkan dari penggunaaan matriks 4x4 memiliki pola halftone yang kurang dibandingkan dengan citra yang diproses menggunakan matriks dithering 16x16. Jumlah piksel dari gambar atau kualitas itu sudah diperkecil jadi hasilnya tidak sebagus 16x16 yang dimana pikselnya lebih banyak.</p>
