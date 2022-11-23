@@ -43,3 +43,34 @@ keseluruhan pixel di dalam citra.</p>
 lokal, dan aras global. </p>
 
 <p align="center"><img src="foto6/3.jpg"></p>
+
+### _1. Point Processing_
+
+<p align="justify">Cara paling mudah untuk melakukan peningkatan mutu pada domain spasial adalah dengan melakukan pemrosesan yang hanya melibatkan satu pixel saja.</p>
+
+- Image Negative
+<p align="justify">Mengubah nilai grey-level pixel citra input dengan : </p>
+
+<p align="center">Hasilnya seperti klise foto :</p>
+<p align="center"><img src="img/im.png"></p>
+
+- Contrast Stretching
+<p align="justify">Mengubah kontras dari suatu image dengan cara mengubah grey-level pixel pada citra menurut fungsi s = T(r) tertentu.</p>
+
+<p align="center">Hasil contrast stretching</p>
+<p align="center"><img src="img/cs.png"></p>
+
+- Histogram Equalization
+<p align="justify">Histogram : diagram yang menunjukkan jumlah kemunculan grey-level (0-255) pada suatu citra. Histogram equalization mengubah bentuk histrogram agar pemetaan grey-level pada citra juga berubah.</p>
+
+<p align="center">Hasil histogram equalization</p>
+<p align="center"><img src="img/he.png"></p>
+
+- Image Substraction
+<p align="justify">Dilakukan jika kita ingin mengambil bagian tertntu saja dalam suatu citra.</p>
+
+<p align="center">Hasil image substraction</p>
+<p align="center"><img src="img/is.png"></p>
+
+- Image Averaging
+<p align="justify">Dilakukan jika kita memiliki beberapa citra yang bergambar sama, namun semua citra mempunyai noise (gangguan). Noise satu citra berbeda dengan noise citra lainnya tidak berkorelasi, cara memperbaikinya adalah dengan melakukan operasi rata-rata terhadap semua citra tersebut.</p>
