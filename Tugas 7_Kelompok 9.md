@@ -6,7 +6,8 @@
 | Fatimah Azzahra Maulida |    https://github.com/xsjtsra    |
 | Khairul Fuad            | https://github.com/khairulfuad09 |
 
-- HPF
+### HPF
+
 <p align="center"><img src="foto7/code1.jpeg"></p>
 <p align="center"><img src="foto7/code2.jpeg"></p>
 
@@ -43,7 +44,8 @@
 - <p align="justify"> Kernel 6</p>
   <p align="center"><img src="foto7/kernel6.jpeg"></p>
 
-- LPF
+### LPF
+
 <p align="justify"><b>Low Pass Filtering (LPF)</b> : Proses filter yang melewatkan komponen citra dengan nilai intensitas yang rendah dan meredam komponen citra dengan nilai intensitas yang tinggi. Low Pass Filter disebut juga smoothing filter yang merupakan salah satu metode untuk menghilangkan noise acak, noise berkala, dan menampilkan pola latar belakang. 
 </p>
 
