@@ -129,3 +129,13 @@
 <p align="center"><img src="foto7/edge.jpeg"></p>
 
 <p align="center"><img src="foto7/hasiledge.jpeg"></p>
+
+### Hasil Edge Detection Manual
+
+- Citra Asli
+
+<p align="center"><img src="foto7/codemanual.jpeg"></p>
+
+- Output
+
+<p align="center"><img src="foto7/hasilmanual.jpeg"></p>
