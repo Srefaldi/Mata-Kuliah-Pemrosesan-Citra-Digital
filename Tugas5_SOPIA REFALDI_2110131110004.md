@@ -24,18 +24,24 @@
 ## STEGANOGRAFI
 
 <p align="justify">Code pada octave untuk Stegano Grafi saya menggunakan seperti dibawah :</p>
-<p align="center"><img src="foto5/3.jpeg"></p>
-<p align="center"><img src="foto5/4.jpeg"></p>
+<p align="center"><img src="foto5/hasil.jpeg"></p>
+<p align="center"><img src="foto5/hasil2.jpeg"></p>
 
 - Citra asli
-<p align="center"><img src="foto5/faldi.jpeg"></p>
+<p align="center"><img src="foto5/citra.jpeg"></p>
 
 - Citra yang sudah disisipkan
-<p align="center"><img src="foto5/Stego.png"></p>
+<p align="center"><img src="foto5/hasilcitra.jpeg"></p>
 
 <p align="justify">Seperti tidak ada pesan yang disiipkan ya pada foto diatas, Untuk melihat atau membuktikan apakah ada pesan rahasia pada foto diatas menggunakan cara seperti dibawah.</p>
 
-<p align="center"><img src="foto5/5">
+- Code :
+
+<p align="center"><img src="foto5/stego.jpeg">
+
+- Output :
+
+<p align="center"><img src="foto5/hasilstego.jpeg">
 
 ## Menggabungkan Gambar
 
