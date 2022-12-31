@@ -48,48 +48,7 @@
 
 ### Hasil HPF Manual Tanpa Fungsi
 
-'''
-% Load citra
-image = imread('contoh.tiff');
-
-% Konversi citra ke grayscale
-if size(image, 3) == 3
-image = rgb2gray(image);
-endif
-
-% Buat kernel high pass filter
-filter_size = 3;
-filter = -ones(filter_size) / (filter_size^2);
-filter(floor(filter_size/2)+1, floor(filter_size/2)+1) = 1 + filter(floor(filter_size/2)+1, floor(filter_size/2)+1);
-
-% Inisialisasi citra yang telah di-filter
-filtered_image = zeros(size(image));
-
-% Aplikasikan high pass filter pada citra secara manual
-for i = 1:size(image, 1)
-for j = 1:size(image, 2)
-% Hitung nilai pixel baru dengan mengalikan nilai pixel dengan kernel
-new_value = 0;
-for k = -floor(filter_size/2):floor(filter_size/2)
-for l = -floor(filter_size/2):floor(filter_size/2)
-if (i+k > 0 && i+k <= size(image, 1) && j+l > 0 && j+l <= size(image, 2))
-new_value = new_value + image(i+k, j+l) \* filter(k+floor(filter_size/2)+1, l+floor(filter_size/2)+1);
-endif
-endfor
-endfor
-filtered_image(i, j) = new_value;
-endfor
-endfor
-
-% Tampilkan citra asli dan citra yang telah di-filter
-subplot(1, 2, 1);
-imshow(image);
-title('Citra Asli');
-
-subplot(1, 2, 2);
-imshow(uint8(filtered_image));
-title('Citra yang telah di-filter');
-'''
+<p align="center"><img src="foto7/fotohight.jpeg"></p>
 
 <p align="center"><img src="foto7/hasilhightmanual.jpeg"></p>
 
@@ -122,52 +81,7 @@ title('Citra yang telah di-filter');
 
 ### Hasil LPF Manual Tanpa Fungsi
 
-'''
-
-clear;
-clc;
-% Load citra
-image = imread('contoh.tiff');
-
-% Konversi citra ke grayscale jika perlu
-if size(image, 3) == 3
-image = rgb2gray(image);
-endif
-
-% Buat kernel low pass filter
-filter_size = 3;
-filter = ones(filter_size) / (filter_size^2);
-
-% Inisialisasi citra yang telah di-filter
-filtered_image = zeros(size(image));
-
-% Aplikasikan low pass filter pada citra secara manual
-for i = 1:size(image, 1)
-for j = 1:size(image, 2)
-% Hitung nilai pixel baru dengan mengalikan nilai pixel dengan kernel
-new_value = 0;
-for k = -floor(filter_size/2):floor(filter_size/2)
-for l = -floor(filter_size/2):floor(filter_size/2)
-if (i+k > 0 && i+k <= size(image, 1) && j+l > 0 && j+l <= size(image, 2))
-new_value = new_value + image(i+k, j+l) \* filter(k+floor(filter_size/2)+1, l+floor(filter_size/2)+1);
-endif
-endfor
-endfor
-filtered_image(i, j) = new_value;
-endfor
-endfor
-
-% Tampilkan citra asli dan citra yang telah di-filter
-figure(1);
-subplot(1, 2, 1);
-imshow(image);
-title('Citra Asli');
-
-subplot(1, 2, 2);
-imshow(uint8(filtered_image));
-title('Citra yang telah di-filter');
-
-'''
+<p align="center"><img src="foto7/fotolow.jpeg"></p>
 
 <p align="center"><img src="foto7/hasillpfmanual.jpeg"></p>
 
@@ -191,48 +105,7 @@ title('Citra yang telah di-filter');
 
 ### Hasil HBF Manual Tanpa Fungsi
 
-'''
-% Load citra
-image = imread('contoh.tiff');
-
-% Konversi citra ke grayscale jika perlu
-if size(image, 3) == 3
-image = rgb2gray(image);
-endif
-
-% Buat kernel high boost filter
-filter_size = 3;
-filter = -ones(filter_size) / (filter_size^2);
-filter(floor(filter_size/2)+1, floor(filter_size/2)+1) = 2 + filter(floor(filter_size/2)+1, floor(filter_size/2)+1);
-
-% Inisialisasi citra yang telah di-filter
-filtered_image = zeros(size(image));
-
-% Aplikasikan high boost filter pada citra secara manual
-for i = 1:size(image, 1)
-for j = 1:size(image, 2)
-% Hitung nilai pixel baru dengan mengalikan nilai pixel dengan kernel
-new_value = 0;
-for k = -floor(filter_size/2):floor(filter_size/2)
-for l = -floor(filter_size/2):floor(filter_size/2)
-if (i+k > 0 && i+k <= size(image, 1) && j+l > 0 && j+l <= size(image, 2))
-new_value = new_value + image(i+k, j+l) \* filter(k+floor(filter_size/2)+1, l+floor(filter_size/2)+1);
-endif
-endfor
-endfor
-filtered_image(i, j) = new_value;
-endfor
-endfor
-
-% Tampilkan citra asli dan citra yang telah di-filter
-subplot(1, 2, 1);
-imshow(image);
-title('Citra Asli');
-
-subplot(1, 2, 2);
-imshow(uint8(filtered_image));
-title('Citra yang telah di-filter');
-'''
+<p align="center"><img src="foto7/fotoboost.jpeg"></p>
 
 <p align="center"><img src="foto7/boostmanual.jpeg"></p>
 
@@ -296,6 +169,8 @@ subplot(1, 2, 2);
 imshow(uint8(filtered_image));
 title('Citra yang telah di-filter');
 '''
+
+<p align="center"><img src="foto7/fotomedian.jpeg"></p>
 
 <p align="center"><img src="foto7/medianmanual.jpeg"></p>
 
