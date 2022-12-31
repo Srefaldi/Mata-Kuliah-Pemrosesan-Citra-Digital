@@ -48,7 +48,8 @@
 
 ### Hasil HPF Manual Tanpa Fungsi
 
-<p align="center"><img src="foto7/manual1.jpg"></p>
+<p align="center"><img src="foto7/highpasmanual.png"></p>
+<p align="center"><img src="foto7/highpasmanual2.png"></p>
 
 <p align="center"><img src="foto7/hasilhightmanual.jpeg"></p>
 
@@ -81,7 +82,9 @@
 
 ### Hasil LPF Manual Tanpa Fungsi
 
-<p align="center"><img src="foto7/manual2.jpg"></p>
+<p align="center"><img src="foto7/lowpasmanual.png"></p>
+
+<p align="center"><img src="foto7/lowpasmanual2.png"></p>
 
 <p align="center"><img src="foto7/hasillpfmanual.jpeg"></p>
 
@@ -105,7 +108,9 @@
 
 ### Hasil HBF Manual Tanpa Fungsi
 
-<p align="center"><img src="foto7/manual3.jpg"></p>
+<p align="center"><img src="foto7/boostmanual.png"></p>
+
+<p align="center"><img src="foto7/boostmanual2.png"></p>
 
 <p align="center"><img src="foto7/boostmanual.jpeg"></p>
 
@@ -128,7 +133,8 @@
 
 ### Hasil Median Filter Manual Tanpa Fungsi
 
-<p align="center"><img src="foto7/manual4.jpg"></p>
+<p align="center"><img src="foto7/medianmanual.png"></p>
+<p align="center"><img src="foto7/medianmanual2.png"></p>
 
 <p align="center"><img src="foto7/medianmanual.jpeg"></p>
 
