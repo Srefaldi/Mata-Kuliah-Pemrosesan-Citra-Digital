@@ -48,7 +48,7 @@
 
 ### Hasil HPF Manual Tanpa Fungsi
 
-<p align="center"><img src="foto7/fotohight.jpeg"></p>
+<p align="center"><img src="foto7/manual1.jpg"></p>
 
 <p align="center"><img src="foto7/hasilhightmanual.jpeg"></p>
 
@@ -81,7 +81,7 @@
 
 ### Hasil LPF Manual Tanpa Fungsi
 
-<p align="center"><img src="foto7/fotolow.jpeg"></p>
+<p align="center"><img src="foto7/manual2.jpg"></p>
 
 <p align="center"><img src="foto7/hasillpfmanual.jpeg"></p>
 
@@ -105,7 +105,7 @@
 
 ### Hasil HBF Manual Tanpa Fungsi
 
-<p align="center"><img src="foto7/fotoboost.jpeg"></p>
+<p align="center"><img src="foto7/manual3.jpg"></p>
 
 <p align="center"><img src="foto7/boostmanual.jpeg"></p>
 
@@ -128,49 +128,7 @@
 
 ### Hasil Median Filter Manual Tanpa Fungsi
 
-'''
-% Load citra
-image = imread('lena.png');
-
-% Konversi citra ke grayscale jika perlu
-if size(image, 3) == 3
-image = rgb2gray(image);
-endif
-
-% Buat kernel median filter
-filter_size = 3;
-
-% Inisialisasi citra yang telah di-filter
-filtered_image = zeros(size(image));
-
-% Aplikasikan median filter pada citra secara manual
-for i = 1:size(image, 1)
-for j = 1:size(image, 2)
-% Ambil nilai pixel yang akan di-filter
-values = [];
-for k = -floor(filter_size/2):floor(filter_size/2)
-for l = -floor(filter_size/2):floor(filter_size/2)
-if (i+k > 0 && i+k <= size(image, 1) && j+l > 0 && j+l <= size(image, 2))
-values = [values, image(i+k, j+l)];
-endif
-endfor
-endfor
-% Hitung median dari nilai pixel yang diambil
-filtered_image(i, j) = median(values);
-endfor
-endfor
-
-% Tampilkan citra asli dan citra yang telah di-filter
-subplot(1, 2, 1);
-imshow(image);
-title('Citra Asli');
-
-subplot(1, 2, 2);
-imshow(uint8(filtered_image));
-title('Citra yang telah di-filter');
-'''
-
-<p align="center"><img src="foto7/fotomedian.jpeg"></p>
+<p align="center"><img src="foto7/manual4.jpg"></p>
 
 <p align="center"><img src="foto7/medianmanual.jpeg"></p>
 
