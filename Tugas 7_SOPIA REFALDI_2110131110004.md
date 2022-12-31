@@ -6,7 +6,9 @@
 | Fatimah Azzahra Maulida |    https://github.com/xsjtsra    |
 | Khairul Fuad            | https://github.com/khairulfuad09 |
 
-### HPF
+## High Pass Filter
+
+### HPF Menggunakan Fungsi
 
 <p align="center"><img src="foto7/code1.jpeg"></p>
 <p align="center"><img src="foto7/code2.jpeg"></p>
@@ -44,7 +46,58 @@
 - <p align="justify"> Kernel 6</p>
   <p align="center"><img src="foto7/kernel6.jpeg"></p>
 
-### LPF
+### Hasil HPF Manual Tanpa Fungsi
+
+'''
+% Load citra
+image = imread('contoh.tiff');
+
+% Konversi citra ke grayscale
+if size(image, 3) == 3
+image = rgb2gray(image);
+endif
+
+% Buat kernel high pass filter
+filter_size = 3;
+filter = -ones(filter_size) / (filter_size^2);
+filter(floor(filter_size/2)+1, floor(filter_size/2)+1) = 1 + filter(floor(filter_size/2)+1, floor(filter_size/2)+1);
+
+% Inisialisasi citra yang telah di-filter
+filtered_image = zeros(size(image));
+
+% Aplikasikan high pass filter pada citra secara manual
+for i = 1:size(image, 1)
+for j = 1:size(image, 2)
+% Hitung nilai pixel baru dengan mengalikan nilai pixel dengan kernel
+new_value = 0;
+for k = -floor(filter_size/2):floor(filter_size/2)
+for l = -floor(filter_size/2):floor(filter_size/2)
+if (i+k > 0 && i+k <= size(image, 1) && j+l > 0 && j+l <= size(image, 2))
+new_value = new_value + image(i+k, j+l) \* filter(k+floor(filter_size/2)+1, l+floor(filter_size/2)+1);
+endif
+endfor
+endfor
+filtered_image(i, j) = new_value;
+endfor
+endfor
+
+% Tampilkan citra asli dan citra yang telah di-filter
+subplot(1, 2, 1);
+imshow(image);
+title('Citra Asli');
+
+subplot(1, 2, 2);
+imshow(uint8(filtered_image));
+title('Citra yang telah di-filter');
+'''
+
+<p align="center"><img src="foto7/hasilhightmanual.jpeg"></p>
+
+<br>
+
+## Low Pass Filter
+
+### LPF Menggunakan Fungsi
 
 <p align="justify"><b>Low Pass Filtering (LPF)</b> : Proses filter yang melewatkan komponen citra dengan nilai intensitas yang rendah dan meredam komponen citra dengan nilai intensitas yang tinggi. Low Pass Filter disebut juga smoothing filter yang merupakan salah satu metode untuk menghilangkan noise acak, noise berkala, dan menampilkan pola latar belakang. 
 </p>
@@ -67,7 +120,60 @@
 
 <p align="center"><img src="foto7/hasillpf.jpeg"></p>
 
-### High-Boost Filtering
+### Hasil LPF Manual Tanpa Fungsi
+
+'''
+
+clear;
+clc;
+% Load citra
+image = imread('contoh.tiff');
+
+% Konversi citra ke grayscale jika perlu
+if size(image, 3) == 3
+image = rgb2gray(image);
+endif
+
+% Buat kernel low pass filter
+filter_size = 3;
+filter = ones(filter_size) / (filter_size^2);
+
+% Inisialisasi citra yang telah di-filter
+filtered_image = zeros(size(image));
+
+% Aplikasikan low pass filter pada citra secara manual
+for i = 1:size(image, 1)
+for j = 1:size(image, 2)
+% Hitung nilai pixel baru dengan mengalikan nilai pixel dengan kernel
+new_value = 0;
+for k = -floor(filter_size/2):floor(filter_size/2)
+for l = -floor(filter_size/2):floor(filter_size/2)
+if (i+k > 0 && i+k <= size(image, 1) && j+l > 0 && j+l <= size(image, 2))
+new_value = new_value + image(i+k, j+l) \* filter(k+floor(filter_size/2)+1, l+floor(filter_size/2)+1);
+endif
+endfor
+endfor
+filtered_image(i, j) = new_value;
+endfor
+endfor
+
+% Tampilkan citra asli dan citra yang telah di-filter
+figure(1);
+subplot(1, 2, 1);
+imshow(image);
+title('Citra Asli');
+
+subplot(1, 2, 2);
+imshow(uint8(filtered_image));
+title('Citra yang telah di-filter');
+
+'''
+
+<p align="center"><img src="foto7/hasillpfmanual.jpeg"></p>
+
+<br>
+
+## High-Boost Filtering
 
 <p align="justify">High-Boost Filtering merupakan salah satu bagian dari operasi yang dapat dilakukan untuk melakukan perbaikan citra.
 </p>
@@ -83,6 +189,55 @@
 
 <p align="center"><img src="foto7/hasilhigh.jpeg"></p>
 
+### Hasil HBF Manual Tanpa Fungsi
+
+'''
+% Load citra
+image = imread('contoh.tiff');
+
+% Konversi citra ke grayscale jika perlu
+if size(image, 3) == 3
+image = rgb2gray(image);
+endif
+
+% Buat kernel high boost filter
+filter_size = 3;
+filter = -ones(filter_size) / (filter_size^2);
+filter(floor(filter_size/2)+1, floor(filter_size/2)+1) = 2 + filter(floor(filter_size/2)+1, floor(filter_size/2)+1);
+
+% Inisialisasi citra yang telah di-filter
+filtered_image = zeros(size(image));
+
+% Aplikasikan high boost filter pada citra secara manual
+for i = 1:size(image, 1)
+for j = 1:size(image, 2)
+% Hitung nilai pixel baru dengan mengalikan nilai pixel dengan kernel
+new_value = 0;
+for k = -floor(filter_size/2):floor(filter_size/2)
+for l = -floor(filter_size/2):floor(filter_size/2)
+if (i+k > 0 && i+k <= size(image, 1) && j+l > 0 && j+l <= size(image, 2))
+new_value = new_value + image(i+k, j+l) \* filter(k+floor(filter_size/2)+1, l+floor(filter_size/2)+1);
+endif
+endfor
+endfor
+filtered_image(i, j) = new_value;
+endfor
+endfor
+
+% Tampilkan citra asli dan citra yang telah di-filter
+subplot(1, 2, 1);
+imshow(image);
+title('Citra Asli');
+
+subplot(1, 2, 2);
+imshow(uint8(filtered_image));
+title('Citra yang telah di-filter');
+'''
+
+<p align="center"><img src="foto7/boostmanual.jpeg"></p>
+
+<br>
+
 ### Median Filter
 
 <p align="justify">Adalah teknik penyaringan digital nonlinear, sering digunakan untuk menghilangkan noise. Penyaringan median sangat banyak digunakan dalam pemrosesan gambar digital karena mempertahankan tepi sambil menghilangkan noise.
@@ -97,6 +252,52 @@
 <p align="center"><img src="foto7/codemedian.jpeg"></p>
 
 <p align="center"><img src="foto7/hasilmedian.jpeg"></p>
+
+### Hasil Median Filter Manual Tanpa Fungsi
+
+'''
+% Load citra
+image = imread('lena.png');
+
+% Konversi citra ke grayscale jika perlu
+if size(image, 3) == 3
+image = rgb2gray(image);
+endif
+
+% Buat kernel median filter
+filter_size = 3;
+
+% Inisialisasi citra yang telah di-filter
+filtered_image = zeros(size(image));
+
+% Aplikasikan median filter pada citra secara manual
+for i = 1:size(image, 1)
+for j = 1:size(image, 2)
+% Ambil nilai pixel yang akan di-filter
+values = [];
+for k = -floor(filter_size/2):floor(filter_size/2)
+for l = -floor(filter_size/2):floor(filter_size/2)
+if (i+k > 0 && i+k <= size(image, 1) && j+l > 0 && j+l <= size(image, 2))
+values = [values, image(i+k, j+l)];
+endif
+endfor
+endfor
+% Hitung median dari nilai pixel yang diambil
+filtered_image(i, j) = median(values);
+endfor
+endfor
+
+% Tampilkan citra asli dan citra yang telah di-filter
+subplot(1, 2, 1);
+imshow(image);
+title('Citra Asli');
+
+subplot(1, 2, 2);
+imshow(uint8(filtered_image));
+title('Citra yang telah di-filter');
+'''
+
+<p align="center"><img src="foto7/medianmanual.jpeg"></p>
 
 ### Edge Detection
 
